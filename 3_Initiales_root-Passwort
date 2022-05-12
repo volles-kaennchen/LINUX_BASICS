@@ -1,0 +1,2 @@
+vagrant ssh
+sudo grep 'Password:' /srv/gitlab/config/initial_root_password
