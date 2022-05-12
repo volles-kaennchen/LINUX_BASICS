@@ -1,0 +1,8 @@
+sudo apt update  && sudo apt -y install build-essential vagrant git virtualbox
+vagrant plugin install vagrant-vbguest
+sudo adduser $USER vboxusers
+[ -d /etc/vbox ] || sudo mkdir -p /etc/vbox
+echo "* 192.168.1.0/24" | sudo tee -a /etc/vbox/networks.conf
+echo "192.168.1.11 gitlab.kurs.iad gitlab" | sudo tee -a /etc/hosts
+mkdir -p $HOME/Dokumente/git
+cd $HOME/Dokumente/git
