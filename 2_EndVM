@@ -1,0 +1,8 @@
+cd Dokumente/git/Gitlab-Docker-standalone/
+vagrant halt
+
+cd ../Gitlab-Runner-mit-Docker/
+vagrant halt
+
+cd ../Gitlab-Docker-mini/
+vagrant halt
