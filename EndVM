@@ -6,3 +6,5 @@ vagrant halt
 
 cd ../Gitlab-Docker-mini/
 vagrant halt
+
+sudo systemctl poweroff
