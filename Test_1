@@ -1,21 +1,59 @@
-cd                              Homeverzeichniss
-mkdir -p Uebung/Test1           Erstellt einen ganzen Pfad
-cd Uebung/Test1                 Öffnet den erstellten Pfad
+cd                                  Homeverzeichniss
+mkdir -p Uebung/Test1               Erstellt einen ganzen Pfad
+cd Uebung/Test1                     Öffnet den erstellten Pfad
 
-git init                        Erstellt Git-Repository
+git init                            Erstellt Git-Repository
 
 git config --global user-name "diegoettliche"
 git config --global user-email "vanessa.witzel@cloud.iad.de"
 
 ll
 touch index.html
-nano index.html                 Skript erstellen und bearbeiten
+nano index.html                     Skript erstellen und bearbeiten
+
+git checkout -- index.html
 
 <html>
 <body>
 <h1>Ein erster Test</h1>
 </body>
-</html>                         Mit STR X+Y+Enter beenden
+</html>                             Mit STR X+Y+Enter beenden
 
-firefox index.html              Öffnet die zuvor erstellte HTML
-cat index.html                  Zeigt das Skript an
+firefox index.html                  Öffnet die zuvor erstellte HTML
+cat index.html                      Zeigt das Skript an
+
+git checkout --index.html           Skript wird auf den letzten Stand zurückgesetzt (Geht nur wenn ein Skript vorhanden ist)
+cat index.html                      Zeigt das Skript erneut an
+
+git remote add origin https://gitlab/chatbot/test1.git
+git add .             oder          git add index.html
+git commit -m "Initial commit"
+git push -u origin master (oder main)
+sudo mv ~/Dokumente/gitlab.crt /etc/ssl/certs
+chmod a+r /etc/ssl/certs/gitlab.crt
+
+ll .git/
+cat .git/HEAD                       Sucht den Ort 
+cat .git/refs/heads/master          Zeigt den Ort an
+
+ll .git /objects/
+
+git pull                            aktualisiert html 
+git log                             zeigt commit an
+
+git config --global                 Liste der optionen
+
+git checkout -b feature_x            Neuen Branch erstellen
+git checkout master
+
+gitt add *
+git commit -m "Test geil gemacht"
+git checkout master
+cat index.html
+git diff master feature_x
+git merge feature_x
+git push 
+git branch -d feature_x
+git brach 
+git pull
+git fetch
