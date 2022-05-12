@@ -1,0 +1,20 @@
+vagrant ssh
+
+sudo gitlab-runner register
+
+ Gitlab-Instance:    https://gitlab/
+ Registration Token: (aus Gitlab-WebGUI)
+ Description:        <ENTER>
+ Tags:               linux,ubuntu,shell,python
+ Maintenance Note:   <ENTER>
+ Executor:           shell
+ 
+sudo gitlab-runner register
+
+ Gitlab-Instance:    https://gitlab/
+ Registration Token: (aus Gitlab-WebGUI)
+ Description:        docker-runner
+ Tags:               linux,ubuntu,docker
+ Maintenance Note:   <ENTER>
+ Executor:           docker
+ Default Image:      ruby:2.7
