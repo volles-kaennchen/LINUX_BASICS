@@ -1,0 +1,21 @@
+cd                              Homeverzeichniss
+mkdir -p Uebung/Test1           Erstellt einen ganzen Pfad
+cd Uebung/Test1                 Öffnet den erstellten Pfad
+
+git init                        Erstellt Git-Repository
+
+git config --global user-name "diegoettliche"
+git config --global user-email "vanessa.witzel@cloud.iad.de"
+
+ll
+touch index.html
+nano index.html                 Skript erstellen und bearbeiten
+
+<html>
+<body>
+<h1>Ein erster Test</h1>
+</body>
+</html>                         Mit STR X+Y+Enter beenden
+
+firefox index.html              Öffnet die zuvor erstellte HTML
+cat index.html                  Zeigt das Skript an
