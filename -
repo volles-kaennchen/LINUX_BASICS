@@ -1,0 +1,14 @@
+git config --global init.defaultBranch main                
+cd Uebung/
+ll
+mkdir rt-pfsense                                      Ordner erstellen 
+cd rt-pfsense                                         Jump in das erstellte VZ
+sudo apt install git-flow
+git init 
+git branch 
+code .
+git flow init                                         Bei Prefix v eintragen
+git status
+git branch                                            Develop + Main 
+git flow feature start vagrant
+git branch
