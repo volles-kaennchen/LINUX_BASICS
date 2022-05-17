@@ -57,3 +57,5 @@ git branch -d feature_x
 git brach 
 git pull
 git fetch
+
+sudoedit /etc /hosts      | Passwort Eingabe + Enter | 
