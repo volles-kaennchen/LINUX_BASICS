@@ -1,0 +1,8 @@
+cd Dokumente/git/Gitlab-Docker-standalone/
+make clean
+
+cd ../Gitlab-Runner-mit-Docker/
+make clean
+
+cd ../Gitlab-Docker-mini/
+make clean
