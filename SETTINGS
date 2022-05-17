@@ -1,0 +1,16 @@
+STRG K            - löscht eine komplette Zeile 
+STR X Y ENTER     - speichert nano und schließt das Fenster 
+Str S             - speichern
+
+**                 fette Schrift
+
+CTRL SHIFT P      -
+STRG ALT T        -
+Strg UMSCHALT V   - einfügen
+STRG D            - logout
+STRG C            - abbrechen
+
+make clean        - löscht VM
+vagrant up        - startet VM
+vagrant halt      - beendet VM
+
