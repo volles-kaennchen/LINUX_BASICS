@@ -1,8 +1,0 @@
-cd Dokumente/git/Gitlab-Docker-standalone/
-vagrant up
-
-cd ../Gitlab-Runner-mit-Docker/
-vagrant up
-
-cd ../Gitlab-Docker-mini/
-vagrant up

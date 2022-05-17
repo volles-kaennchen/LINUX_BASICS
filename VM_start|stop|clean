@@ -1,0 +1,30 @@
+cd Dokumente/git/Gitlab-Docker-standalone/
+vagrant up
+
+cd ../Gitlab-Runner-mit-Docker/
+vagrant up
+
+cd ../Gitlab-Docker-mini/
+vagrant up
+_________________________________________________________
+
+cd Dokumente/git/Gitlab-Docker-standalone/
+vagrant halt
+
+cd ../Gitlab-Runner-mit-Docker/
+vagrant halt
+
+cd ../Gitlab-Docker-mini/
+vagrant halt
+
+sudo systemctl poweroff
+____________________________________________________________
+
+cd Dokumente/git/Gitlab-Docker-standalone/
+make clean
+
+cd ../Gitlab-Runner-mit-Docker/
+make clean
+
+cd ../Gitlab-Docker-mini/
+make clean
