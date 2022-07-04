@@ -1,0 +1,133 @@
+ls                                  --Ordner im Filemanager
+ls ORDNERNAME                       --zeigt unterordner aus Ordner an
+cd                                  --Homeverzeichniss
+mkdir -p Uebung/Test1               --Erstellt einen ganzen Pfad
+cd Uebung/Test1                     --Öffnet den erstellten Pfad
+-----------------------------------------------------------------------------------
+git init                            --Erstellt Git-Repository
+git config --global user-name "diegoettliche"
+git config --global user-email "vanessa.witzel@cloud.iad.de"
+-----------------------------------------------------------------------------------
+ll
+touch index.html
+nano index.html                     --Skript erstellen und bearbeiten
+-----------------------------------------------------------------------------------
+git checkout -- index.html
+
+<html>
+<body>
+<h1>Ein erster Test</h1>
+</body>
+</html>                             --Mit STR X+Y+Enter beenden
+-----------------------------------------------------------------------------------
+firefox index.html                  --Öffnet die zuvor erstellte HTML
+cat index.html                      --Zeigt das Skript an
+git checkout --index.html           --Skript wird auf den letzten Stand zurückgesetzt (Geht nur wenn ein Skript vorhanden ist)
+cat index.html                      --Zeigt das Skript erneut an
+-----------------------------------------------------------------------------------
+git remote add origin https://gitlab/chatbot/test1.git
+
+git add .             --ODER          git add index.html
+git commit -m "Initial commit"
+git push -u origin master (oder main)
+sudo mv ~/Dokumente/gitlab.crt /etc/ssl/certs
+chmod a+r /etc/ssl/certs/gitlab.crt
+-----------------------------------------------------------------------------------
+ll .git/
+cat .git/HEAD                       --Sucht den Ort 
+cat .git/refs/heads/master          --Zeigt den Ort an
+ll .git /objects/
+-----------------------------------------------------------------------------------
+git pull                            --aktualisiert html 
+git log                             --zeigt commit an
+-----------------------------------------------------------------------------------
+git config --global                 --Liste der optionen
+-----------------------------------------------------------------------------------
+git checkout -b feature_x           --Neuen Branch erstellen
+git checkout master
+-----------------------------------------------------------------------------------
+gitt add *
+git commit -m "Test geil gemacht"
+git checkout master
+cat index.html
+git diff master feature_x
+git merge feature_x
+git push 
+git branch -d feature_x
+git branch 
+git pull
+git fetch
+-----------------------------------------------------------------------------------
+sudoedit /etc /hosts      | Passwort Eingabe + Enter | 
+-----------------------------------------------------------------------------------
+git config --global init.defaultBranch main                
+cd Uebung/
+ll
+mkdir rt-pfsense                    --Ordner erstellen 
+cd rt-pfsense                       --Jump in das erstellte VZ
+sudo apt install git-flow
+git init 
+git branch 
+code .
+git flow init                       --Bei Prefix v eintragen
+git status
+git branch                          --Develop + Main 
+git flow feature start vagrant
+git branch
+-----------------------------------------------------------------------------------
+cat scripts/docker-provision.sh    --Zeigt Zertifikat an
+-----------------------------------------------------------------------------------
+openssl s_client -showcerts -connect gitlab:443 < /dev/null 2>/dev/null | sudo openssl x509 -outform PEM > /etc/ssl/certs/gitlab.pem
+-- ruft zertifikat auf und gibt Zertifikat als .pem aus
+-----------------------------------------------------------------------------------
+STRG + , = erw. Einstellungen
+> Anwendung > Proxy > Haken raus bei Proxy Strict SSL | System Certificates | Proxy Support: off
+> Gitlab workflow > > Cert: /home/lokaleradmin/Dokumente/git/gitlab.crt > Ignore Certificate Error: Haken setzen
+> Quellcodeverwaltung > /home/lokaleradmin/Dokumente/git/gitlab.crt > Username > Password > Meldung mit JA bestätigen
+-----------------------------------------------------------------------------------
+STRG K            --löscht eine komplette Zeile 
+STR X Y ENTER     --speichert nano und schließt das Fenster 
+Str S             --speichern
+**                --fette Schrift
+CTRL SHIFT P      
+STRG ALT T        
+Strg UMSCHALT V   --einfügen
+STRG D            --logout
+STRG C            --abbrechen
+-----------------------------------------------------------------------------------
+make clean        --löscht VM
+vagrant up        --startet VM
+vagrant halt      --beendet VM
+-----------------------------------------------------------------------------------
+General
+Ctrl+Shift+P, F1 Show Command Palette
+Ctrl+P Quick Open, Go to File...
+Ctrl+Shift+N New window/instance
+Ctrl+W Close window/instance
+Ctrl+, User Settings
+Ctrl+K Ctrl+S Keyboard Shortcuts
+-----------------------------------------------------------------------------------
+Basic editing
+Ctrl+X Cut line (empty selection)
+Ctrl+C Copy line (empty selection)
+Alt+ ↓ / ↑ Move line down/up
+Ctrl+Shift+K Delete line
+Ctrl+Enter /
+Ctrl+Shift+Enter
+Insert line below/ above
+Ctrl+Shift+\ Jump to matching bracket
+Ctrl+] / Ctrl+[ Indent/Outdent line
+Home / End Go to beginning/end of line
+Ctrl+ Home / End Go to beginning/end of file
+Ctrl+ ↑ / ↓ Scroll line up/down
+Alt+ PgUp / PgDn Scroll page up/down
+Ctrl+Shift+ [ / ] Fold/unfold region
+Ctrl+K Ctrl+ [ / ] Fold/unfold all subregions
+Ctrl+K Ctrl+0 /
+Ctrl+K Ctrl+J
+Fold/Unfold all regions
+Ctrl+K Ctrl+C Add line comment
+Ctrl+K Ctrl+U Remove line comment
+Ctrl+/ Toggle line comment
+Ctrl+Shift+A Toggle block comment
+Alt+Z Toggle word wrap
