@@ -1,3 +1,5 @@
+# DC1 konfigurieren
+
 --Festlegen einer IP Adresse
 New-NetIPAddress "IPADRESSE HIER EINFÜGEN" -PrefixLength 16 -InterfaceAlias Ethernet (Enter)
 
@@ -13,3 +15,9 @@ hostname (Enter)
 --Tools und Features installieren
  Install-WindowsFeature AD-Domain-Services,DNS
  Install-ADDSForest -DomainName 'DOMAINE HIER EINFÜGEN' -SafeModeAdministratorPassword ( ConvertTo-SecureString -AsPlainText -Force 'Pa$$w0rd' ) -Force
+---------------------------------------------------------------------------------------------------
+# CL1 konfigurieren
+New-NetIPAddress 172.16.0.100 -PrefixLength 16 -InterfaceAlias Ethernet
+Set-DnsClientServerAddress -InterfaceAlias Ethernet -ServerAddresses 172.16.0.10
+Rename-Computer CL1 -Force -Restart
+Add-Computer -DomainName r1.kurs.iad -Restart
