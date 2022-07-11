@@ -1,0 +1,15 @@
+--Festlegen einer IP Adresse
+New-NetIPAddress "IPADRESSE HIER EINFÜGEN" -PrefixLength 16 -InterfaceAlias Ethernet (Enter)
+
+--Festlegen des DNS Servers
+Set-DnsClientServerAddress -InterfaceAlias Ethernet -ServerAddresses 127.0.0.1 (Enter)
+
+--Umbennen des Servers
+Rename-Computer DC1 -Force -Restarthostname (Enter)
+
+--Name des Host abfragen
+hostname (Enter)
+---------------------------------------------------------------------------------
+--Tools und Features installieren
+ Install-WindowsFeature AD-Domain-Services,DNS
+ Install-ADDSForest -DomainName 'DOMAINE HIER EINFÜGEN' -SafeModeAdministratorPassword ( ConvertTo-SecureString -AsPlainText -Force 'Pa$$w0rd' ) -Force
