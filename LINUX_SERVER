@@ -35,3 +35,5 @@ Add-Computer -DomainName r1.kurs.iad -Restart
 [DC1.r1.kurs.iad]: PS C:\Users\Administrator\Documents> dir *.msc
 [DC1.r1.kurs.iad]: PS C:\Users\Administrator\Documents> cd CERT:
 [DC1.r1.kurs.iad]: PS Cert:\> dir
+
+certmgr.msc
